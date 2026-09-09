@@ -1,0 +1,196 @@
+/**
+ * 好鸭官网 NiceDuck (niceduck.cyou) 专属深青绿科技主题样式
+ * Quantum Link - Dark Slate & Cyan Neon Glassmorphism Theme
+ */
+
+:root {
+  /* VitePress 色彩变量覆盖 */
+  --vp-c-bg: #0b1329;
+  --vp-c-bg-alt: #0f172a;
+  --vp-c-bg-elv: #132238;
+  --vp-c-bg-soft: rgba(15, 23, 42, 0.7);
+
+  /* 主色调：发光量子青绿 */
+  --vp-c-brand-1: #14b8a6;
+  --vp-c-brand-2: #0d9488;
+  --vp-c-brand-3: #06b6d4;
+  --vp-c-brand-next: #34d399;
+
+  --vp-c-text-1: #f8fafc;
+  --vp-c-text-2: #94a3b8;
+  --vp-c-text-3: #64748b;
+
+  --vp-c-border: rgba(20, 184, 166, 0.2);
+  --vp-c-divider: rgba(255, 255, 255, 0.08);
+
+  /* Hero 文本颜色 */
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(135deg, #ffffff 30%, #34d399 70%, #06b6d4 100%);
+}
+
+/* 全局深青绿渐变与微光网格背景 */
+body {
+  background: 
+    radial-gradient(circle at 85% 15%, rgba(20, 184, 166, 0.18) 0%, transparent 45%),
+    radial-gradient(circle at 15% 85%, rgba(6, 182, 212, 0.12) 0%, transparent 50%),
+    linear-gradient(180deg, #0b1329 0%, #0d2035 40%, #062b2b 100%);
+  background-attachment: fixed;
+  color: var(--vp-c-text-1);
+}
+
+/* 微光十字星与几何量子连线背景纹理 */
+.VPHome {
+  background-image: 
+    radial-gradient(rgba(20, 184, 166, 0.15) 1px, transparent 0),
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px, 40px 40px, 40px 40px;
+}
+
+/* 毛玻璃 Header 导航栏 */
+.VPNav {
+  background-color: rgba(11, 19, 41, 0.75) !important;
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(20, 184, 166, 0.15);
+}
+
+/* Hero Badge 子标题 */
+.VPHero .text {
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #2dd4bf;
+  font-weight: 600;
+  display: inline-block;
+  padding: 4px 16px;
+  border-radius: 9999px;
+  background: rgba(20, 184, 166, 0.1);
+  border: 1px solid rgba(45, 212, 191, 0.3);
+  box-shadow: 0 0 12px rgba(45, 212, 191, 0.15);
+  margin-bottom: 16px;
+}
+
+/* Hero 主标题 */
+.VPHero .name {
+  font-size: 3.8rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.VPHero .tagline {
+  color: #cbd5e1;
+  font-size: 1.35rem;
+}
+
+/* 按钮样式定制 */
+/* 主按钮：纯白高亮圆角实体按钮 */
+.VPButton.brand {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-radius: 9999px !important;
+  font-weight: 700 !important;
+  padding: 0 28px !important;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3), 0 4px 12px rgba(0, 0, 0, 0.5) !important;
+  transition: all 0.3s ease !important;
+  border: none !important;
+}
+
+.VPButton.brand:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 6px 16px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* 次级按钮：青色微光描边按钮 */
+.VPButton.alt {
+  background: rgba(15, 23, 42, 0.6) !important;
+  color: #5eead4 !important;
+  border: 1px solid rgba(45, 212, 191, 0.5) !important;
+  border-radius: 9999px !important;
+  font-weight: 600 !important;
+  padding: 0 26px !important;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease !important;
+}
+
+.VPButton.alt:hover {
+  background: rgba(20, 184, 166, 0.15) !important;
+  border-color: #2dd4bf !important;
+  box-shadow: 0 0 15px rgba(45, 212, 191, 0.3) !important;
+  transform: translateY(-2px);
+}
+
+/* Feature 毛玻璃卡片样式 */
+.VPFeature {
+  background: rgba(15, 23, 42, 0.65) !important;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(20, 184, 166, 0.18) !important;
+  border-radius: 16px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.VPFeature:hover {
+  border-color: rgba(45, 212, 191, 0.5) !important;
+  box-shadow: 0 10px 30px -10px rgba(20, 184, 166, 0.3) !important;
+  transform: translateY(-4px);
+}
+
+.VPFeature .icon {
+  font-size: 2rem;
+  background: rgba(20, 184, 166, 0.12);
+  border-radius: 12px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.VPFeature .title {
+  color: #f1f5f9 !important;
+  font-weight: 700;
+}
+
+.VPFeature .details {
+  color: #94a3b8 !important;
+}
+
+/* Markdown 文章引言与卡片样式强化 */
+.custom-block.tip, .custom-block.info {
+  background-color: rgba(15, 23, 42, 0.8) !important;
+  border-color: #14b8a6 !important;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+}
+
+table {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(20, 184, 166, 0.2);
+}
+
+th {
+  background: rgba(20, 184, 166, 0.15) !important;
+  color: #5eead4 !important;
+}
+
+td, th {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* 渐变修饰框与测速榜样式卡片 */
+.niceduck-card {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(20, 184, 166, 0.25);
+  border-radius: 16px;
+  padding: 24px;
+  margin: 20px 0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.niceduck-card h3 {
+  color: #5eead4;
+  margin-top: 0;
+}
