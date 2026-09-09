@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO 基础元数据配置 -->
+  <title>好鸭官网 (NiceDuck) - 2026出海网络加密与AI风控解决中心 | niceduck.cyou</title>
+  <meta name="description" content="好鸭 (NiceDuck) 官方网站（niceduck.cyou）。量子连网·ALWAYS AHEAD。提供全节点纯正 IEPL 物理内网专线与独立原生双 ISP 住宅家宽出口，秒过 ChatGPT 1020 Access Denied 与 Claude 地区风控。" />
+  <meta name="keywords" content="好鸭官网, NiceDuck, niceduck.cyou, 量子专线, 原生双ISP, IEPL专线, ChatGPT 1020, Claude风控, 排障手册, 出海加密" />
+  <meta name="author" content="好鸭 NiceDuck 技术团队" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Canonical 规范链接 -->
+  <link rel="canonical" href="https://niceduck.cyou/" />
+  
+  <!-- Open Graph / 社交媒体 SEO 数据 -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="好鸭官网 NiceDuck" />
+  <meta property="og:title" content="好鸭官网 (NiceDuck) - 2026出海网络加密与AI风控解决中心" />
+  <meta property="og:description" content="量子连网 · QUANTUM LINK · ALWAYS AHEAD. 稳定、快速、易用的全球网络加密与 AI 报错救援服务。" />
+  <meta property="og:url" content="https://niceduck.cyou/" />
+  <meta property="og:image" content="https://niceduck.cyou/blog/logo.png" />
+
+  <style>
+    /* 全局 CSS 重置与科技渐变主题 */
+    :root {
+      --bg-dark: #0b1329;
+      --bg-gradient: linear-gradient(180deg, #0b1329 0%, #0d2035 40%, #062b2b 100%);
+      --teal-primary: #14b8a6;
+      --teal-light: #5eead4;
+      --teal-glow: rgba(20, 184, 166, 0.3);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --card-bg: rgba(15, 23, 42, 0.7);
+      --card-border: rgba(20, 184, 166, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg-gradient);
+      background-attachment: fixed;
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* 微光量子网格背景纹理 */
+    .grid-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        radial-gradient(rgba(20, 184, 166, 0.15) 1px, transparent 0),
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 40px 40px, 40px 40px, 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* 顶部 Navigation 导航栏 */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(11, 19, 41, 0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--card-border);
+      z-index: 100;
+    }
+
+    .nav-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 72px;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #fff;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo span {
+      background: linear-gradient(135deg, #ffffff, #34d399, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--teal-light);
+    }
+
+    /* 高亮 🛠️ 排障手册/博客 导航按钮 */
+    .btn-blog-nav {
+      background: rgba(20, 184, 166, 0.15) !important;
+      color: var(--teal-light) !important;
+      border: 1px solid var(--teal-primary);
+      padding: 8px 18px;
+      border-radius: 9999px;
+      font-weight: 700 !important;
+      box-shadow: 0 0 12px var(--teal-glow);
+      transition: all 0.3s ease;
+    }
+
+    .btn-blog-nav:hover {
+      background: var(--teal-primary) !important;
+      color: #0f172a !important;
+      box-shadow: 0 0 20px rgba(20, 184, 166, 0.6);
+      transform: translateY(-1px);
+    }
+
+    .btn-cta-nav {
+      background: #ffffff;
+      color: #0f172a !important;
+      padding: 8px 20px;
+      border-radius: 9999px;
+      font-weight: 700 !important;
+      transition: all 0.3s ease;
+    }
+
+    .btn-cta-nav:hover {
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+      transform: translateY(-1px);
+    }
+
+    /* Hero 主展示区域 */
+    .hero {
+      padding: 100px 0 60px;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 20px;
+      border-radius: 9999px;
+      background: rgba(20, 184, 166, 0.1);
+      border: 1px solid rgba(45, 212, 191, 0.3);
+      color: var(--teal-light);
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      margin-bottom: 24px;
+      box-shadow: 0 0 16px var(--teal-glow);
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 900;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #ffffff 30%, #34d399 70%, #06b6d4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto 36px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 52px;
+      padding: 0 36px;
+      border-radius: 9999px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+      background: #ffffff;
+      color: #0f172a;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+    }
+
+    .btn-secondary {
+      background: rgba(15, 23, 42, 0.6);
+      color: var(--teal-light);
+      border: 1px solid var(--teal-primary);
+      backdrop-filter: blur(8px);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(20, 184, 166, 0.15);
+      transform: translateY(-3px);
+      box-shadow: 0 0 20px var(--teal-glow);
+    }
+
+    /* 需求 2：首页突出大卡片 —— 官方排障库入口 */
+    .troubleshoot-banner {
+      margin: 40px 0 80px;
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(6, 78, 59, 0.5));
+      border: 1px solid var(--teal-primary);
+      border-radius: 20px;
+      padding: 40px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 40px -10px var(--teal-glow);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .troubleshoot-text h2 {
+      font-size: 1.8rem;
+      color: #fff;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .troubleshoot-text p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    /* 三大核心特性网格 */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+      margin-bottom: 80px;
+    }
+
+    .feature-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 32px;
+      backdrop-filter: blur(12px);
+      transition: all 0.3s ease;
+    }
+
+    .feature-card:hover {
+      border-color: var(--teal-light);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px -10px var(--teal-glow);
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+    }
+
+    .feature-card h3 {
+      font-size: 1.3rem;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    .feature-card p {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+    }
+
+    /* 底部 Footer */
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding: 40px 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      background: rgba(11, 19, 41, 0.9);
+    }
+
+    footer a {
+      color: var(--teal-light);
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.4rem; }
+      .troubleshoot-banner { flex-direction: column; text-align: center; padding: 28px; }
+      .hero-buttons { flex-direction: column; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid-bg"></div>
+
+  <!-- 1. 顶部 Header 导航栏 -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="/" class="logo">
+        🦆 <span>好鸭官网 NiceDuck</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="/">首页</a></li>
+        <li><a href="#features">特色优势</a></li>
+        <li><a href="#pricing">量子套餐</a></li>
+        <!-- 高亮排障手册 / 博客按钮（链接指向子路径 /blog/） -->
+        <li><a href="/blog/" class="btn-blog-nav">🛠️ 排障手册 / 博客</a></li>
+        <li><a href="/blog/pricing-reviews/" class="btn-cta-nav">立即注册</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- 2. Hero 主区域 -->
+  <main class="container">
+    <section class="hero">
+      <div class="badge">—— 量子连网 QUANTUM LINK · ALWAYS AHEAD ——</div>
+      <h1>好鸭官网 NiceDuck</h1>
+      <p>专注 2026 出海网络报错救援、原生双 ISP 住宅家宽节点与全球 IEPL 物理专线加密。</p>
+      
+      <div class="hero-buttons">
+        <a href="#pricing" class="btn btn-primary">🚀 立即接入专线</a>
+        <a href="/blog/" class="btn btn-secondary">🛠️ 访问排障手册与博客</a>
+      </div>
+    </section>
+
+    <!-- 需求 2：首页核心大卡片 —— 官方排障库与痛点截流 -->
+    <section class="troubleshoot-banner">
+      <div class="troubleshoot-text">
+        <h2>🛠️ 遇到 ChatGPT 1020 / Claude 风控 / Clash 报错？</h2>
+        <p>访问好鸭官方技术排障库，硬核拆解 Cloudflare WAF、IP 欺诈分值与客户端 DNS 漏包，3 分钟彻底解决访问拦截！</p>
+      </div>
+      <a href="/blog/" class="btn btn-primary" style="white-space: nowrap;">查看官方排障库 →</a>
+    </section>
+
+    <!-- 3. 三大核心特性网格 -->
+    <section id="features" class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🏠</div>
+        <h3>原生双 ISP 住宅家宽</h3>
+        <p>节点出口由本地通信运营商直连分配，MaxMind / IPQS 欺诈得分低于 5，无感秒过 Cloudflare WAF Access Denied。</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>IEPL 物理内网专线</h3>
+        <p>端到端点对点内网光纤传输，数据不经过公网 GFW 审查，彻底杜绝敏感时期断网与高丢包，延迟低至 30ms。</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🛡️</div>
+        <h3>晚高峰 0 丢包保障</h3>
+        <p>配备冗余骨干网带宽储备，晚上 20:00 - 23:00 黄金拥堵时段千兆满速跑满，4K 8K 极清视频秒开不卡顿。</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- 4. 底部 Footer -->
+  <footer>
+    <div class="container">
+      <p>量子连网 · QUANTUM LINK · ALWAYS AHEAD | 官方域名：<a href="https://niceduck.cyou">niceduck.cyou</a></p>
+      <p style="margin-top: 8px;">Copyright © 2026 好鸭官网 NiceDuck. All Rights Reserved. | <a href="/blog/">技术博客与排障中心</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
