@@ -4,6 +4,9 @@ export default defineConfig({
   title: "好鸭官网 - 2026出海报错排查与高速量子专线接入中心",
   description: "好鸭 (NiceDuck) 官方网站。专注 2026 ChatGPT/Claude 1020 风控报错排查、Clash Verge/小火箭故障修复、原生双 ISP 纯净 IEPL 量子专线测速与避坑指南。",
   lang: 'zh-CN',
+  sitemap: {
+    hostname: 'https://niceduck.cyou'
+  },
   head: [
     ['link', { rel: 'canonical', href: 'https://niceduck.cyou' }],
     ['meta', { name: 'keywords', content: '好鸭官网, NiceDuck, niceduck.cyou, 量子专线, ChatGPT 1020, Claude 地区限制, Clash Verge, 原生双ISP, 机场推荐, 跑路黑名单' }],
